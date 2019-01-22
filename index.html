@@ -6,6 +6,12 @@
 	    <!--Materialize CDN-->
 	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+	    <script type="text/javascript">
+	  		document.addEventListener('DOMContentLoaded', function() {
+    			var elems = document.querySelectorAll('.dropdown-trigger');
+    			var instances = M.Dropdown.init(elems, {});
+  			});
+	    </script>
 	    <!-- Google Fonts-->
 	    <link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet">
 	    <!--Vue CND-->
@@ -79,12 +85,24 @@
                 <div id="menu">
                     <a href="https://www.nintendo.com/amiibo"><img id="menu_pic" src="https://images-na.ssl-images-amazon.com/images/I/51fxSEBd3vL._SX569_.jpg"></a>
                     <br>
-                    <a class="waves-effect red darken-4 waves-light btn-small">Home</a>
-                    <a class="waves-effect light-green darken-1 waves-light btn-small" href="https://www.nintendo.com/amiibo/what-is-amiibo">About</a>
-                    <a class="waves-effect light-blue accent-3 waves-light btn-small">Buy</a>
-                    <a class="waves-effect teal waves-light btn-small" href="https://www.reddit.com/r/amiibosale/">Sell</a>
-                    <a class="waves-effect amber waves-light btn-small" href="https://www.reddit.com/r/amiiboSwap/">Trade</a>
-                    <a class="waves-effect pink darken-2 waves-light btn-small" href="https://www.reddit.com/r/amiibo/">Share</a>
+                    <a class="waves-effect red darken-4 waves-light btn-small" href="https://www.nintendo.com/amiibo/what-is-amiibo">About</a>
+                    <a class='dropdown-trigger waves-effect light-green darken-1 waves-light btn-small' href='#' data-target='dropdown1'>Buy</a>
+                    <a class="waves-effect light-blue accent-3 waves-light btn-small" href="https://www.reddit.com/r/amiibosale/">Sell</a>
+                    <a class="waves-effect teal waves-light btn-small" href="https://www.reddit.com/r/amiiboSwap/">Trade</a>
+                    <a class="waves-effect amber waves-light btn-small" href="https://www.reddit.com/r/amiibo/">Share</a>
+                    <a class="waves-effect pink darken-2 waves-light btn-small" href="https://github.com/mestes1530/amiibohub.github.io">Code</a>
+  					<!-- Buy Dropdown Menu -->
+  					<ul id='dropdown1' class='dropdown-content'>
+    					<li><a href="#!">Close ❌</a></li>
+    					<li class="divider" tabindex="-1"></li>
+    					<li><a href="https://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=amiibo&rh=i%3Aaps%2Ck%3Aamiibo">Amazon</a></li>
+    					<li><a href="https://www.bestbuy.com/site/searchpage.jsp?st=amiibo&_dyncharset=UTF-8&id=pcat17071&type=page&sc=Global&cp=1&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All+Categories&ks=960&keys=keys">Best Buy</a></li>
+    					<li><a href="https://www.ebay.com/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313.TR12.TRC2.A0.H0.Xamiibo.TRS0&_nkw=amiibo&_sacat=0">eBay</a></li>
+    					<li><a href="https://www.gamestop.com/browse?nav=16k-3-amiibo,28zu0">GameStop</a></li>
+    					<li><a href="https://store.nintendo.com/ng3/browse/subcategory.jsp;jsessionid=yaJ3TjO9W8oUGHqic19-WRCCGs_nE4S0M7tcn5Po3cDGDB46H2b9!793767043?categoryId=cat860034">Nintendo</a></li>
+    					<li><a href="https://www.target.com/s?searchTerm=amiibo">Target</a></li>
+    					<li><a href="https://www.walmart.com/search/?query=amiibo">Walmart</a></li>
+  					</ul>
                 </div>
             </div>
             <div id="web_page">
